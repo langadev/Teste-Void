@@ -1,6 +1,6 @@
 import { AnalizeProgresso } from "./components/AnalizeProgresso"
 import Insumos from "./components/Insumos"
-import ProgressTable from "./components/login/ProgressTable"
+import ProgressTable from "./components/ProgressTable"
 export default function App() {
   
   return (
