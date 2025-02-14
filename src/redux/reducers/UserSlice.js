@@ -12,13 +12,13 @@ export const userSlice = createSlice({
     error: null,
   },
   reducers: {
-    // Login pendente
+   
     loginPending: (state) => {
       state.loading = true;
-      state.error = null; // Limpa erros anteriores ao iniciar
+      state.error = null; 
     },
 
-    // Login bem-sucedido
+   
     loginSuccess: (state, action) => {
       state.user = action.payload.user;
       state.token = action.payload.token;
@@ -28,14 +28,14 @@ export const userSlice = createSlice({
       state.error = null;
     },
 
-    // Falha no login
+    
     loginFailure: (state, action) => {
-      delete loginFetch.defaults.headers.Authorization; // Remove token de autenticação global
+      delete loginFetch.defaults.headers.Authorization; 
       state.loading = false;
       state.error = action.payload;
     },
 
-    // Logout
+  
     logout: (state) => {
       state.user = null;
       state.token = null;
@@ -47,8 +47,7 @@ export const userSlice = createSlice({
   },
 });
 
-// Exportando actions geradas automaticamente pelo createSlice
+
 export const { loginPending, loginSuccess, loginFailure, logout } = userSlice.actions;
 
-// Exportando o reducer gerado pelo createSlice
 export default userSlice.reducer;

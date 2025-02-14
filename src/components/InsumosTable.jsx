@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 const InsumosTable = () => {
   const [data, setData] = useState([]);
 
-  const API_TOKEN = "e114a9b42d5b4f7627b3b5f917eb81089fa7feb1d0cc9e9ddfaf3fea6efda6cd4722b82bc1e674fc7343db6ccc9d348fccc8c77d4aacadd279a751bfdd1f8f3537ef3a1e5eedf3c5a864d8b6a0918586481118e9e5865c77836b7affe6678d6a9328d7dbf85445a8b8e95886c5f6095bcf1bff9408d67fc20e457592003f5a73b807c783ff141aecc26285dd9c337f6ee12a089dd8e37d9bdea4c23b6a3bb18c3b5e197590c00372ede7553533ee7b1f86710c1536fc484649e7260f93339a4ca31e85b341799e3c1f324ec43738c4a517327f3848032bfe5c302e606689dff004504bc9bc0fbb23a8c6cf3fa51444d698e4f9021baf39539174d08b0ad22c620c64f34cc848502b173c23b5d7a99d8bf389e11858234f8cd32d105b1b70b57ebc24373b6c5678e60ea1a6cb23a2e96a80b84c775c0740dd";
 
 
   useEffect(() => {
@@ -14,7 +13,7 @@ const InsumosTable = () => {
           "https://sonil-dev.void.co.mz/api/v4/analytics/farm-inputs/23e9336a-b20a-4478-a58f-875cc065e871?offset=1&limit=10&filter=&phase=nurseries",
           {
             headers: {
-              Authorization: `Bearer ${API_TOKEN}`,
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
           }
         );
